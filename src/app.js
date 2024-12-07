@@ -15,4 +15,11 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 
+// import Routers 
+import userRouter from "./routes/user.routes.js"
+
+// routes deceration
+app.use("/users", userRouter)
+
+//http://localhost:8000/users/register
 export {app}
